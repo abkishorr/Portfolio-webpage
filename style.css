@@ -7,7 +7,6 @@
     font-family: 'Red Hat Display', sans-serif;
      
 }
-
 .portfolio-container{
 
     min-height: 100vh;
@@ -18,7 +17,6 @@
 
     display: flex;
     gap: 3.5rem;
-  
     height: 15vh;
     width:100%;
     justify-content: center;
@@ -40,19 +38,20 @@
     text-transform: uppercase;
     font-size: 1rem;
     color:#fff;
+    position: relative;
 
 
 
 }
 .left-container, .right-container{
 height: 100vh;
-display:flex;
+display: flex;
 align-items: center;
 
 
 }
 .left-container{
-    background-color: #262525;
+    background-color: rgb(40,40,41);
     width: 70%;
     padding-left: 3rem;
 
@@ -61,7 +60,7 @@ align-items: center;
 }
 .right-container{
 
-background-color: #3877FF;
+background: linear-gradient(-45deg, #892CDC, #262525 70%);
 width: 30%;
 }
 .icons .fa-brands{
@@ -79,7 +78,7 @@ width: 30%;
  
 }
 .content span{
-    color:#3877FF;
+    color:#892CDC;
 }
 
 .content{
@@ -91,7 +90,7 @@ width: 30%;
 }
 .content h1{
     font-size: 4rem;
-    color:#5DB9EE;
+    color:#892CDC;
 
 }
 
@@ -104,32 +103,32 @@ line-height: 1.8rem;
 
 }
 .btn-container button{
-border: .1rem solid #5DB9EE;
+border: .1rem solid #892CDC;
 font-size: 1.1rem;
 padding: .8rem 1.5rem;
 border-radius: .5rem;
 transition: .5s ease;
 }
 button:nth-child(1){
-    background-color:#5DB9EE;
-    color:#262525;
+    background-color:#892CDC;
+    color:rgb(40,40,41);
 }
 button:nth-child(2){
     background: transparent;
-    color: #5DB9EE;
+    color:#892CDC;
     margin-left: 2rem;
 }
 button:nth-child(1):hover{
     background:transparent;
-    color:#5DB9EE;
+    color:#892CDC;
 }
 button:nth-child(2):hover{
-    background:#5DB9EE;
-    color:#262525;
+    background:#892CDC;
+    color:rgb(40,40,41);
 }
 .icons .fa-brands:hover{
     cursor:pointer;
-    background: linear-gradient(#fff,#5DB9EE);
+    background: linear-gradient(#262525,blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -144,13 +143,33 @@ transform: translate(-50%,-50%);
 
 }
 .circle:nth-child(1){
-    background:linear-gradient(90deg,transparent 50%,#262525 50%);
-    width:38rem;
+    background:linear-gradient(90deg,transparent 50%,rgb(40,40,41) 50%);
+    width:30rem;
 }
 .circle:nth-child(2){
   background-image: url("image/profile.jpg");
-    width:30rem;
+    width:24rem;
     background-size: 100%;
     background-repeat: no repeat;
+    border: 0rem solid white;
+}
+
+.navlist li a::after, .navlist .active::after{
+content: "";
+position: absolute;
+background:#fff;
+width:100%;
+height:.1rem;
+left:0;
+bottom:-5px;
+transform:scalex(0);
+transition: transform .5s;
+transform-origin: bottom right;
 
 }
+.navlist li a:hover::after, .navlist .active::after{
+    transform:scalex(1);
+    transform-origin: bottom left;
+}
+
+
