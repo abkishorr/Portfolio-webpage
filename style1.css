@@ -49,13 +49,14 @@
 height: 100vh;
 display: flex;
 align-items: center;
+/* flex-grow: 1; */
 
 
 }
 .left-container{
     background-color: rgb(40,40,41);
     width: 70%;
-    padding-left: 3rem;
+    padding-left: 1rem;
 
 
 
@@ -86,16 +87,23 @@ line-height: 1.8rem;
 
 }
 .icons .fa-brands{
-    color: #bbb;
-    font-size: 1.5rem;
+    color: #fff;
+    font-size: 4rem;
 
 }
 .icons{
 
     display:flex;
-    flex-direction: column;
+    flex-direction:row;
     justify-content: center;
     align-items: center;
-    gap:3rem;
+    gap:4rem;
+    transform:  translate(5px,400%);
  
+}
+.icons .fa-brands:hover{
+    cursor:pointer;
+    background:linear-gradient(#892CDC, #00BFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
